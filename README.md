@@ -14,7 +14,7 @@ Go to the following [website](https://github.com/lewagon/setup) and set up your 
 
 You can use the Le Wagon's template in order to setup your project. Simply run the following code and ensure you give it a proper project name. Also push your code to Github.
 
-```
+```bash
 rails new \
   -d postgresql \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/devise.rb \
@@ -39,7 +39,7 @@ The items added are pretty self explanatory. These are the usual project configu
 
 Run the following code
 
-```
+```bash
 mkdir .vscode
 touch .vscode/extensions.json
 ```
@@ -52,7 +52,7 @@ These extensions will help you code better. You can read more about the differen
 
 Adjust your VS Code settings `code > preferences > settings`, add a `,` at the end of the file and paste the following code
 
-```
+```JSON
 "files.associations": {
   "*.erb": "erb"
 },
@@ -81,3 +81,38 @@ Adjust your VS Code settings `code > preferences > settings`, add a `,` at the e
 If there is a yellow squigily line in your settings.json, most likely the code is repeated. Try to combine them.
 
 We do this so that VSCode will automatically format your ruby code. This will be really helpful once we install rubocop and make it compatible with the project.
+
+## Commit linting
+
+Install the overcommit gem by running the following
+
+```bash
+gem install overcommit
+touch .overcommit.yml
+```
+
+after which copy and the paste the contents from the following [file](.overcommit.yml). After which install the hooks
+
+```bash
+overcommit --install
+overcommit --sign
+```
+
+This ensures that all our commits contains a capitalized subject in the following format `<type>: <description>` and it not longer than 72 characters long. A subject must also be followed by an empty line before any description is written. Companies will often have some kind of commit lint formats to follow to ensure consistency. We will be following [convential commit format](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## Rubocop
+
+Install the rubocop gem `bundle install rubocop` and run the autofix using the following commands
+
+```bash
+rubocop # Check
+rubocop -A # Autocorrect
+```
+
+Add the following ot your vscode settings
+
+```JSON
+"[ruby]": {
+  "editor.defaultFormatter": "misogi.ruby-rubocop"
+}
+```

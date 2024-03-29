@@ -1,0 +1,44 @@
+CommitMsg:
+  ALL:
+    on_warn: fail
+
+  CapitalizedSubject:
+    enabled: false
+
+  EmptyMessage:
+    enabled: true
+
+  TrailingPeriod:
+    enabled: true
+
+  TextWidth:
+    enabled: true
+    max_subject_width: 72
+
+  SingleLineSubject:
+    enabled: true
+
+  MessageFormat:
+    enabled: true
+    pattern: '^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test){1}(\([\w\-\.]+\))?(!)?: ([\w ])+([\s\S]*)'
+    expected_pattern_message: "<type>: <description>"
+    sample_message: "feat(config): Add new XYZ"
+
+PreCommit:
+  ALL:
+    on_warn: fail
+
+  AuthorEmail:
+    enabled: true
+
+  AuthorName:
+    enabled: true
+
+  MergeConflicts:
+    enabled: true
+
+  YamlSyntax:
+    enabled: true
+
+  BundleCheck:
+    enabled: true

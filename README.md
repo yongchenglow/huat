@@ -99,3 +99,20 @@ overcommit --sign
 ```
 
 This ensures that all our commits contains a capitalized subject in the following format `<type>: <description>` and it not longer than 72 characters long. A subject must also be followed by an empty line before any description is written. Companies will often have some kind of commit lint formats to follow to ensure consistency. We will be following [convential commit format](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## Rubocop
+
+Install the rubocop gem `bundle install rubocop` and run the autofix using the following commands
+
+```bash
+rubocop # Check
+rubocop -A # Autocorrect
+```
+
+Add the following ot your vscode settings
+
+```JSON
+"[ruby]": {
+  "editor.defaultFormatter": "misogi.ruby-rubocop"
+}
+```

@@ -49,3 +49,7 @@
 .form-floating label {
   color: $secondary;
 }
+
+.form-inputs div label abbr[title] {
+  text-decoration: none;
+}

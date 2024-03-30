@@ -42,3 +42,10 @@ PreCommit:
 
   BundleCheck:
     enabled: true
+
+PostMerge:
+  ALL:
+    on_warn: fail
+
+  BundleInstall:
+    enabled: true

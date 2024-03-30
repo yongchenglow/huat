@@ -1,0 +1,55 @@
+.form-label {
+  margin-bottom: 0.25rem;
+}
+
+.form-check-input[type="checkbox"] {
+  background-color: transparent;
+}
+
+.form-control {
+  background-color: transparent;
+  border-color: tint-color($primary, 50%);
+}
+
+.form-control:focus {
+  background-color: transparent;
+}
+
+::placeholder {
+  color: $gray-400;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-select ~ label {
+  background-color: white;
+  padding: 0rem 0.25rem;
+  width: auto;
+  height: auto;
+  color: tint-color(black, 50%);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown):focus ~ label,
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-select ~ label {
+  color: tint-color($component-active-bg, 50%);
+}
+
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-control-plaintext ~ label::after,
+.form-floating > .form-select ~ label::after {
+  background-color: white;
+}
+
+.form-floating label {
+  color: $secondary;
+}
+
+.form-inputs div label abbr[title] {
+  text-decoration: none;
+}

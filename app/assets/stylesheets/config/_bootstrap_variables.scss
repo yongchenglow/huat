@@ -6,21 +6,29 @@
 
 // General style
 $font-family-sans-serif: $body-font;
-$headings-font-family:   $headers-font;
-$body-bg:                $light-gray;
-$font-size-base:         1rem;
+$headings-font-family: $headers-font;
+$body-bg: $light-gray;
+$font-size-base: 1rem;
 
 // Colors
 $body-color: $gray;
-$primary:    $blue;
-$success:    $green;
-$info:       $yellow;
-$danger:     $red;
-$warning:    $orange;
+$primary: $blue;
+$success: $green;
+$info: $yellow;
+$danger: $red;
+$warning: $orange;
 
 // Buttons & inputs' radius
-$border-radius:    2px;
-$border-radius-lg: 2px;
-$border-radius-sm: 2px;
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-sm: 0.25rem;
 
 // Override other variables below!
+$form-floating-label-opacity: 1;
+$form-floating-label-transform: scale(0.75) translateY(-0.75rem)
+  translateX(1.125rem);
+$form-floating-input-padding-t: 0.625rem;
+$form-floating-height: 3rem;
+$form-floating-padding-x: 1rem;
+$form-floating-padding-y: 0.75rem;
+$input-btn-focus-width: 0.0625rem !default;

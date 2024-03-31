@@ -116,3 +116,45 @@ Add the following ot your vscode settings
   "editor.defaultFormatter": "misogi.ruby-rubocop"
 }
 ```
+
+## Github Workflows
+
+Github workflows is a mini [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) pipeline. The 2 pipelines created are
+
+1. [lint](./.github/workflows/lint.yml)
+2. [test](./.github/workflows/test.yml)
+
+To add them to your project simply copy the files in the github workflows folder. Do take note that this is github specific
+
+## Test coverage
+
+To find out how much of your code is covered. There are usually some test coverage software being used. In this project we will be using [simplecov](https://github.com/simplecov-ruby/simplecov)
+
+To install add the following to you gemfile under the test suite
+
+```
+group :test do
+  ...
+  gem 'simplecov', require: false
+end
+```
+
+Add the following to your [`test_helper.rb`](./test/test_helper.rb) to ensure that we only check test coverage for certain modules
+
+```Ruby
+require 'simplecov'
+SimpleCov.start 'rails'
+```
+
+Add coverage folder to .gitignore
+
+```Bash
+echo coverage >> .gitignore
+```
+
+To see the coverage report run the following
+
+```Bash
+rails test # To generate the coverage report
+open coverage/index.html #To see the report
+```
